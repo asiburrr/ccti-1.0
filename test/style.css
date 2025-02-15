@@ -1,0 +1,94 @@
+/* Custom Styles */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080?text=Hero+Image');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+
+
+/* File: main.css */
+:root {
+    --primary: #6366f1;
+    --secondary: #a855f7;
+    --dark: #1f2937;
+    --light: #f8f9fa;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(99,102,241,0.05) 0%, rgba(255,255,255,1) 50%);
+}
+
+.hero-img {
+    border-radius: 1rem;
+    overflow: hidden;
+    transform: perspective(1500px) rotateY(15deg);
+}
+
+.stats-box {
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.category-card .card {
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .card {
+    transform: translateY(-0.5rem);
+}
+
+.courses-section .glide__slide {
+    padding: 0 1rem;
+}
+
+.instructor-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.instructor-card img {
+    transition: transform 0.3s ease;
+}
+
+.instructor-card:hover img {
+    transform: scale(1.05);
+}
+
+.stats-section {
+    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+@media (max-width: 768px) {
+    .hero-img {
+        transform: none;
+    }
+    
+    .stats-box {
+        position: static;
+        margin-top: 2rem;
+    }
+}
