@@ -8,12 +8,12 @@
                 <span class="brand-name fw-bold text-primary">CoreDeft</span>
             </a>
 
-    <!-- Animated Hamburger Menu -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="toggler-bar top-bar"></span>
-        <span class="toggler-bar middle-bar"></span>
-        <span class="toggler-bar bottom-bar"></span>
-    </button>
+            <!-- Animated Hamburger Menu -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="toggler-bar top-bar"></span>
+                <span class="toggler-bar middle-bar"></span>
+                <span class="toggler-bar bottom-bar"></span>
+            </button>
 
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="mainNav">
@@ -112,6 +112,18 @@
 
 <!-- Add Custom CSS for Enhanced Design -->
 <style>
+            :root {
+            --primary-color: #00008b;
+            --secondary-color: #6366f1;
+        }
+
+        .primary{
+            background-color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+        }
     .nav-glass {
         background: rgba(255, 255, 255, 0.8) !important;
         backdrop-filter: blur(10px);

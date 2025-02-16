@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="card.css?111">
     <!-- Custom CSS -->
     <style>
-
         body {
             font-family: 'Inter', sans-serif;
             background: #f8fafc;
