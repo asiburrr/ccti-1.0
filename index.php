@@ -1,364 +1,234 @@
-<?php
-session_start();
-require 'connection.php';
-function generateCsrfToken()
-{
-    return bin2hex(random_bytes(32));
-}
-if (!isset($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = generateCsrfToken();
-}
-
-// Check if user token exists in session
-if (isset($_SESSION['user_token'])) {
-    $userToken = $_SESSION['user_token'];
-    // Check if the user token exists in the users table
-    $query = "SELECT admin_id FROM admins WHERE user_token = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $userToken);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $student = $result->fetch_assoc();
-
-    if (!empty($student)) {
-        // Token is valid for student, redirect to the student dashboard
-        $_SESSION['successMessages'] = ["Logged in automatically."];
-        header("Location: admin");
-        exit();
-    }
-
-    // Token is invalid, unset the user_token session variable
-    unset($_SESSION['user_token']);
-
-    // Add error logging to see what's causing the issue
-    $error_message = "Invalid user token found in session. Token: " . $userToken;
-    error_log($error_message, 3, "error_log.txt");
-}
-
-// Check if user token exists in cookies
-if (isset($_COOKIE['user_token'])) {
-    $userToken = $_COOKIE['user_token'];
-
-    // Check if the user token exists in the users table
-    $query = "SELECT admin_id FROM admins WHERE user_token = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $userToken);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $student = $result->fetch_assoc();
-
-    if (!empty($student)) {
-        // Token is valid for student, redirect to the student dashboard
-        $_SESSION['successMessages'] = ["Logged in automatically."];
-        header("Location: admin");
-        exit();
-    }
-
-    // Token is invalid, delete the cookie
-    setcookie("user_token", "", time() - 3600, "/"); // delete cookie by setting expiry time in the past
-
-    // Add error logging to see what's causing the issue
-    $error_message = "Invalid user token found in cookies. Token: " . $userToken;
-    error_log($error_message, 3, "error_log.txt");
-}
-?>
-
+<!-- File: header.php -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Battles of Biology Exam System – BOB stands for Dedication. A seamless platform designed to help students test their knowledge and achieve academic and admission success.">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <title>Admin - BOB Exam System</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://examsite2.batb.io/admin_login">
-    <meta property="og:title" content="Admin - BOB Exam System">
-    <meta property="og:description" content="Welcome to the Battles of Biology Exam System – BOB stands for Dedication. A seamless platform designed to help students test their knowledge and achieve academic and admission success.">
-    <meta property="og:image" content="https://examsite2.batb.io/uploads/Battles%20Of%20Biology.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://examsite2.batb.io/admin_login">
-    <meta property="twitter:title" content="Admin - BOB Exam System">
-    <meta property="twitter:description" content="Welcome to the Battles of Biology Exam System – BOB stands for Dedication. A seamless platform designed to help students test their knowledge and achieve academic and admission success.">
-    <meta property="twitter:image" content="https://examsite2.batb.io/uploads/Battles%20Of%20Biology.png">
-    <!-- Logo -->
-    <link rel="logo" href="https://examsite2.batb.io/uploads/favicon-bob.png">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://examsite2.batb.io/uploads/favicon-bob.png">
-    <link rel="icon" href="https://examsite2.batb.io/uploads/favicon-bob.png" type="image/png">
-    <link rel="canonical" href="https://examsite2.batb.io/admin_login">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Article",
-            "headline": "Admin - BOB Exam System",
-            "description": "Welcome to the Battles of Biology Exam System – BOB stands for Dedication. A seamless platform designed to help students test their knowledge and achieve academic and admission success.",
-            "author": {
-                "@type": "Person",
-                "name": "Sadiqur Rahman Sadab"
-            }
-        }
-    </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
+    <title>CoreDeft</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="card.css?111">
+    <!-- Custom CSS -->
     <style>
         body {
-            background-color: #F7F8FB;
-            font-family: 'Roboto', sans-serif;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
         }
 
-        .login-container {
-            background-color: #ffffff;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 380px;
-            text-align: center;
+        .animated-entry {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s forwards;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
+        @keyframes fadeUp {
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        .login-title {
-            font-size: 40px;
-            font-weight: bold;
-            color: #00008b;
-            margin-bottom: 25px;
-        }
-
-        .form-group {
+        .hero-section {
+            background: linear-gradient(150deg, #f8fafc 50%, rgba(99, 102, 241, 0.05) 100%);
+            padding: 120px 0;
             position: relative;
+            overflow: hidden;
         }
 
-        .form-control {
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            right: -10%;
+            top: -50%;
+            width: 70%;
+            height: 200%;
+            background: var(--gradient);
+            opacity: 0.05;
+            transform: rotate(15deg);
+            z-index: 0;
+        }
+
+        .stat-pill {
+            background: rgba(99, 102, 241, 0.1);
+            padding: 8px 20px;
             border-radius: 50px;
-            padding-left: 50px;
-            font-size: 16px;
-            height: 45px;
             transition: all 0.3s ease;
         }
 
-        .form-control:focus {
-            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
-            transform: scale(1.05);
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
         }
 
-        .input-icon {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #aaa;
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
         }
 
-        .btn-primary {
-            background-color: #00008b;
-            border-color: #00008b;
-            font-size: 16px;
-            border-radius: 50px;
-            padding: 12px;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
 
-        .btn-primary:hover {
-            background-color: #0051a2;
-            transform: translateY(-2px);
-        }
-
-        .login-btn-google {
-            text-decoration: none;
-            background-color: #000;
-            color: white;
-            border: none;
-            padding: 12px;
-            width: 100%;
-            border-radius: 50px;
-            font-size: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .login-btn-google:hover {
-            background-color: #ccc;
-            transform: translateY(-2px);
-        }
-
-        .login-btn-google svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .divider {
+        .instructor-card {
             position: relative;
-            margin: 20px 0;
-            text-align: center;
+            overflow: hidden;
+            border-radius: 16px;
+            transition: all 0.3s ease;
         }
 
-        .divider::before,
-        .divider::after {
-            content: '';
+        .instructor-card:hover .instructor-overlay {
+            opacity: 1;
+        }
+
+        .instructor-overlay {
             position: absolute;
-            top: 50%;
-            width: 40%;
-            border-top: 1px solid #ddd;
-        }
-
-        .divider::before {
-            left: 0;
-        }
-
-        .divider::after {
-            right: 0;
-        }
-
-        .divider span {
-            position: relative;
-            font-size: 14px;
-            color: #777;
-            padding: 0 10px;
-            background-color: #fff;
-        }
-
-        .forgot-password {
-            font-size: 14px;
-            margin-top: 15px;
-            color: #00008b;
-        }
-
-        .forgot-password a {
-            color: #00008b;
-            text-decoration: none;
-        }
-
-        .forgot-password a:hover {
-            text-decoration: underline;
-        }
-
-        .note {
-            margin-top: 15px;
-            font-size: 12px;
-            color: #888;
-        }
-
-        .note span {
-            font-weight: bold;
-            color: #00008b;
-        }
-
-        .loading {
-            display: none;
-            margin-left: 10px;
-        }
-
-        .alert {
-            display: none;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        @media (min-width: 300px) and (max-width: 767px) {
-            body {
-                margin: 10px;
-            }
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
-
 <body>
-    <div class="login-container">
-        <h2 class="login-title"><i class="fas fa-lock"></i> Admin</h2>
-        <!-- Alert Messages -->
-        <div id="alertBox" class="alert" role="alert"></div>
-        <form action="auth/authentication" method="post">
-            <input type="hidden" name="user_type" value="admin">
-            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-            <div class="mb-3 form-group">
-                <i class="fas fa-user input-icon"></i>
-                <input type="number" class="form-control" name="username" placeholder="Enter your Admin ID" required>
-            </div>
-            <div class="mb-3 form-group">
-                <i class="fas fa-lock input-icon"></i>
-                <input type="password" class="form-control" name="password" placeholder="Enter your Password" required>
-            </div>
-            <button type="submit" id="submitBtn" class="btn btn-primary w-100 mb-3">
-                Log In
-            </button>
-        </form>
-    </div>
-    <!-- Bootstrap Toasts -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <!-- Toasts for Success Messages -->
-        <?php if (!empty($_SESSION['successMessages'])) : ?>
-            <?php foreach ($_SESSION['successMessages'] as $successMessage) : ?>
-                <div class="toast bg-success text-white animate__animated animate__fadeInRight" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-                        <strong class="me-auto">Success</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    <?php include('nav.php'); ?>
+
+    <!-- Hero Section -->
+    <section class="hero-section hero-gradient">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 animated-entry" style="animation-delay: 0.2s">
+                    <h1 class="display-3 fw-bold mb-4">Master In-Demand<br><span class="text-primary">Professional Skills</span></h1>
+                    <p class="lead text-muted mb-5">Join 80,000+ professionals advancing their careers with industry-relevant courses</p>
+                    
+                    <div class="d-flex gap-3 mb-5">
+                        <a href="#" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Explore Courses</a>
+                        <a href="#" class="btn btn-outline-dark btn-lg px-5 py-3 rounded-pill">Watch Demo</a>
                     </div>
-                    <div class="toast-body">
-                        <?php echo $successMessage; ?>
+
+                    <div class="d-flex gap-4">
+                        <div class="stat-pill">
+                            <span class="fw-medium">30K+</span> Active Learners
+                        </div>
+                        <div class="stat-pill">
+                            <span class="fw-medium">850+</span> Expert Courses
+                        </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-            <?php unset($_SESSION['successMessages']); ?>
-        <?php endif; ?>
-        <!-- Toasts for Error Messages -->
-        <?php if (!empty($_SESSION['errorMessages'])) : ?>
-            <?php foreach ($_SESSION['errorMessages'] as $errorMessage) : ?>
-                <div class="toast bg-danger text-white animate__animated animate__fadeInRight" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-                        <strong class="me-auto">Error</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-                        <?php echo $errorMessage; ?>
+                
+                <div class="col-lg-6 animated-entry" style="animation-delay: 0.4s">
+                    <div class="position-relative">
+                        <img src="https://skillgro.websolutionus.com/uploads/custom-images/wsus-img-2024-06-26-06-06-24-6800.webp" class="img-fluid rounded-4" alt="Online Learning">
+                        <div class="position-absolute bottom-0 start-0 translate-middle-y ms-5 bg-white p-3 rounded-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar avatar-lg">
+                                    <img src="https://skillgro.websolutionus.com/uploads/custom-images/wsus-img-2024-06-26-06-06-24-6800.webp" class="rounded-circle" alt="Instructor">
+                                </div>
+                                <div>
+                                    <div class="h6 mb-0 fw-medium">Featured Instructor</div>
+                                    <small class="text-muted">Mark Davenport</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-            <?php unset($_SESSION['errorMessages']); ?>
-        <?php endif; ?>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Initialize Toasts -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Categories -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row mb-5 animated-entry">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Explore Trending Categories</h2>
+                    <p class="text-muted">Discover courses in popular fields</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2 animated-entry">
+                    <div class="category-card text-center">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-box bg-primary-light">
+                                <i class="fas fa-code text-primary fs-4"></i>
+                            </div>
+                        </div>
+                        <h5 class="mb-1">Development</h5>
+                        <small class="text-muted">12 Courses</small>
+                    </div>
+                </div>
+                <!-- Repeat other categories -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5 animated-entry">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <h2 class="display-5 fw-bold mb-0">Featured Courses</h2>
+                    <a href="#" class="btn btn-link text-decoration-none">
+                        View All <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <?php include('card.php'); ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 animated-entry">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Meet Our Experts</h2>
+                    <p class="text-muted">Learn from industry-leading professionals</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 animated-entry">
+                    <div class="instructor-card">
+                        <img src="https://skillgro.websolutionus.com/uploads/custom-images/wsus-img-2024-06-26-06-06-24-6800.webp" class="img-fluid" alt="Instructor">
+                        <div class="instructor-overlay">
+                            <div class="text-center text-white">
+                                <h5 class="mb-1">Ethan Granger</h5>
+                                <p class="small mb-3">Senior Frontend Developer</p>
+                                <div class="h4 mb-0">$1.2M+</div>
+                                <small>Student Earnings</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat other instructors -->
+            </div>
+        </div>
+    </section>
+
+    <?php include('footer.php'); ?>
+
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
-        var toastElList = [].slice.call(document.querySelectorAll('.toast'));
-        var toastList = toastElList.map(function(toastEl) {
-            return new bootstrap.Toast(toastEl)
-        });
-        toastList.forEach(function(toast) {
-            toast.show();
+        gsap.from(".animated-entry", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.1,
+            ease: "power4.out"
         });
     </script>
 </body>
-
 </html>

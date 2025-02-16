@@ -5,7 +5,7 @@
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <img src="https://app.coredeft.com/img/favicon.ico" alt="CoreDeft Logo" width="60" class="me-2">
-                <span class="brand-name fw-bold text-primary">CoreDeft</span>
+                <span class="brand-name fw-bold color-primary">CoreDeft</span>
             </a>
 
             <!-- Animated Hamburger Menu -->
@@ -64,7 +64,7 @@
                 <!-- Search Bar -->
                 <form class="d-flex searchh" action="search.php" method="GET">
                     <div class="input-group ">
-                        <input class="form-control rounded-pill" type="search" name="query" placeholder="Search courses..." aria-label="Search">
+                        <input class="form-control rounded-pill focus search" type="search" name="query" placeholder="Search courses..." aria-label="Search">
                         <button class="btn btn-primary rounded-pill" type="submit">
                             <i class="fas fa-search"></i> <!-- Font Awesome Search Icon -->
                         </button>
@@ -112,18 +112,50 @@
 
 <!-- Add Custom CSS for Enhanced Design -->
 <style>
-            :root {
-            --primary-color: #00008b;
-            --secondary-color: #6366f1;
-        }
+    :root {
+        --primary-color: #00008b;
+        --secondary-color: #6366f1;
+    }
 
-        .primary{
-            background-color: var(--primary-color);
-        }
+    .color-primary {
+        color: var(--primary-color);
+    }
 
-        .btn-primary {
-            background-color: var(--primary-color);
-        }
+    .primary {
+        background-color: var(--primary-color);
+    }
+
+    .btn-outline-primary {
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .btn-outline-primary:hover {
+        border: 1px solid var(--primary-color);
+        background-color: var(--primary-color);
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+    }
+
+    .search {
+        border: 1px solid var(--primary-color);
+    }
+
+    .focus:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 2px 0.1rem rgba(0, 0, 139, 0.25);
+    }
+
+    .hover:hover {}
+
     .nav-glass {
         background: rgba(255, 255, 255, 0.8) !important;
         backdrop-filter: blur(10px);
@@ -131,33 +163,35 @@
     }
 
     /* Animated Hamburger Icon */
-.navbar-toggler {
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-}
+    .navbar-toggler {
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+    }
 
-.toggler-bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #0d6efd;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
+    .toggler-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
 
-.navbar-toggler[aria-expanded="true"] .top-bar {
-    transform: translateY(8px) rotate(45deg);
-}
-.navbar-toggler[aria-expanded="true"] .middle-bar {
-    opacity: 0;
-}
-.navbar-toggler[aria-expanded="true"] .bottom-bar {
-    transform: translateY(-8px) rotate(-45deg);
-}
+    .navbar-toggler[aria-expanded="true"] .top-bar {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .middle-bar {
+        opacity: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .bottom-bar {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
     /* Brand Name Styling */
     .brand-name {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         transition: color 0.3s ease;
     }
@@ -188,10 +222,12 @@
         border-top-right-radius: 0px !important;
         border-bottom-right-radius: 0px !important;
     }
+
     .input-group .btn {
         border-top-left-radius: 0px !important;
         border-bottom-left-radius: 0px !important;
     }
+
     .searchh {
         margin-right: .6rem;
         max-width: 260px;
@@ -226,27 +262,35 @@
         .btn {
             font-size: 0.9rem;
         }
+
         .cu {
             margin-top: 10px;
             display: flex;
             text-align: center;
             justify-content: center;
         }
+
         .searchh {
-        margin-right: 0;
-        max-width: 100%;
-    }
+            margin-right: 0;
+            max-width: 100%;
+        }
     }
 
     /* Hover Effects for Icons */
     .nav-link i,
     .dropdown-item i {
         transition: transform 0.3s ease, color 0.3s ease;
+        color: var(--primary-color) !important;
+        text-decoration: var(--primary-color);
+    }
+
+    .nav-item .nav-link {
+        color: var(--primary-color);
     }
 
     .nav-link:hover i,
     .dropdown-item:hover i {
         transform: scale(1.2);
-        color: #0d6efd;
+        color: var(--primary-color);
     }
 </style>
