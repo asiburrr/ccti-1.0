@@ -4,7 +4,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center" href="index.php">
-                <img src="https://app.coredeft.com/img/favicon.ico" alt="CoreDeft Logo" width="60" class="me-2">
+                <img src="https://app.coredeft.com/img/favicon.ico" alt="CoreDeft Logo" width="50" class="me-2">
                 <span class="brand-name fw-bold color-primary">CoreDeft</span>
             </a>
 
@@ -20,7 +20,7 @@
                 <!-- Left Navigation Links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active d-flex align-items-center" href="index.php">
+                        <a class="nav-link d-flex align-items-center" href="index.php">
                             <i class="fas fa-home me-2"></i> Home
                         </a>
                     </li>
@@ -28,7 +28,7 @@
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
                             <i class="fas fa-th-large me-2"></i> Categories
                         </a>
-                        <ul class="dropdown-menu shadow">
+                        <ul class="dropdown-menu  shadow">
                             <li><a class="dropdown-item d-flex align-items-center" href="courses.php?category=all">
                                     <i class="fas fa-list me-2"></i> All Courses
                                 </a></li>
@@ -78,8 +78,8 @@
                     <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
                         <div class="dropdown">
                             <a href="#" class="d-flex align-items-center text-decoration-none" role="button" data-bs-toggle="dropdown">
-                                <img src="https://via.placeholder.com/40" alt="User Avatar" class="rounded-circle me-2" width="40">
-                                <span class="text-dark fw-semibold"><?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
+                                <img src="https://placehold.co/40" alt="User Avatar" class="rounded-circle me-2" width="40">
+                                <span class="color-primary fw-semibold"><?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
                             </a>
                             <ul class="dropdown-menu shadow">
                                 <li><a class="dropdown-item d-flex align-items-center" href="profile.php">
@@ -153,8 +153,6 @@
         border-color: var(--primary-color);
         box-shadow: 0 0 2px 0.1rem rgba(0, 0, 139, 0.25);
     }
-
-    .hover:hover {}
 
     .nav-glass {
         background: rgba(255, 255, 255, 0.8) !important;
@@ -280,17 +278,11 @@
     .nav-link i,
     .dropdown-item i {
         transition: transform 0.3s ease, color 0.3s ease;
-        color: var(--primary-color) !important;
-        text-decoration: var(--primary-color);
     }
 
-    .nav-item .nav-link {
-        color: var(--primary-color);
-    }
 
     .nav-link:hover i,
     .dropdown-item:hover i {
         transform: scale(1.2);
-        color: var(--primary-color);
     }
 </style>

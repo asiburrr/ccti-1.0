@@ -14,7 +14,7 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="card.css?111">
+    <link rel="stylesheet" href="card.css?1112">
     <!-- Custom CSS -->
     <style>
         body {
@@ -55,8 +55,24 @@
             z-index: 0;
         }
 
+        .avatar-lg {
+            width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+    /* Overlap avatars slightly */
+    transition: transform 0.3s ease;
+        }
+        .avatar-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
         .stat-pill {
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary-color);
             padding: 8px 20px;
             border-radius: 50px;
             transition: all 0.3s ease;
@@ -108,35 +124,36 @@
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 animated-entry" style="animation-delay: 0.2s">
-                    <h1 class="display-3 fw-bold mb-4">Master In-Demand<br><span class="text-primary">Professional Skills</span></h1>
-                    <p class="lead text-muted mb-5">Join 80,000+ professionals advancing their careers with industry-relevant courses</p>
+                    <h1 class="display-3 fw-bold mb-4">Master In-Demand<br><span class="color-primary">Professional Skills</span></h1>
+                    <p class="lead text-muted mb-5">Every career growth journey is unique. We're here to guide you every step of the way.</p>
                     
                     <div class="d-flex gap-3 mb-5">
                         <a href="#" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Explore Courses</a>
                         <a href="#" class="btn btn-outline-dark btn-lg px-5 py-3 rounded-pill">Watch Demo</a>
                     </div>
-
+                    <!---
                     <div class="d-flex gap-4">
                         <div class="stat-pill">
-                            <span class="fw-medium">30K+</span> Active Learners
+                            <span class="fw-medium">1000+</span> Active Learners
                         </div>
                         <div class="stat-pill">
                             <span class="fw-medium">850+</span> Expert Courses
                         </div>
                     </div>
+    -->
                 </div>
                 
                 <div class="col-lg-6 animated-entry" style="animation-delay: 0.4s">
                     <div class="position-relative">
-                        <img src="https://skillgro.websolutionus.com/uploads/custom-images/wsus-img-2024-06-26-06-06-24-6800.webp" class="img-fluid rounded-4" alt="Online Learning">
+                        <img src="undraw_personal-finance_98p3.svg" class="img-fluid rounded-4" alt="Online Learning">
                         <div class="position-absolute bottom-0 start-0 translate-middle-y ms-5 bg-white p-3 rounded-3">
                             <div class="d-flex align-items-center gap-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="https://skillgro.websolutionus.com/uploads/custom-images/wsus-img-2024-06-26-06-06-24-6800.webp" class="rounded-circle" alt="Instructor">
+                                <div class=" avatar-lg">
+                                    <img src="https://cctiapp.coredeft.com/uploads/afifurrahman.jpg" class="rounded-circle" alt="Instructor">
                                 </div>
                                 <div>
-                                    <div class="h6 mb-0 fw-medium">Featured Instructor</div>
-                                    <small class="text-muted">Mark Davenport</small>
+                                    <div class="h6 mb-0 fw-medium">Afifur Rahman Arnob</div>
+                                    <small class="text-muted">Chief Executive Officer(CEO)</small>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +163,7 @@
         </div>
     </section>
 
-    <!-- Trending Categories -->
+    <!-- Trending Categories 
     <section class="py-5 bg-white">
         <div class="container">
             <div class="row mb-5 animated-entry">
@@ -167,10 +184,11 @@
                         <small class="text-muted">12 Courses</small>
                     </div>
                 </div>
-                <!-- Repeat other categories -->
+
             </div>
         </div>
     </section>
+    -->
 
     <!-- Featured Courses -->
     <section class="py-5">
@@ -189,7 +207,7 @@
         </div>
     </section>
 
-    <!-- Instructor Section -->
+    <!-- Instructor Section 
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row mb-5 animated-entry">
@@ -212,11 +230,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- Repeat other instructors -->
+
             </div>
         </div>
     </section>
-
+    -->
     <?php include('footer.php'); ?>
 
     <!-- GSAP Animations -->
