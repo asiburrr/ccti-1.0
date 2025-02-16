@@ -56,9 +56,6 @@
     border-radius: 25px;
     font-size: 0.85rem;
     font-weight: 600;
-
-
-    
     display: inline-flex;
     align-items: center;
 }
@@ -199,7 +196,7 @@
     color: #9ca3af;
     text-decoration: line-through;
     font-size: 1rem;
-    margin: -6px;
+    margin: -5px;
     text-align: left;
 }
 
@@ -212,7 +209,7 @@
 
 .enroll-button {
 
-    padding: 8px;
+    padding: 8px 10px;
     background: var(--gradient);
     color: white;
     border: none;
@@ -230,7 +227,13 @@
     opacity: 0.9;
     gap: 12px;
 }
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+    .stat-item {
+        gap: 2px;
+        font-size: 0.8rem;
 
+    }
+}
 @media (max-width: 768px) {
     .course-card {
         max-width: 400px;
@@ -259,7 +262,6 @@
     .stat-item {
         gap: 2px;
         font-size: 0.9rem;
-
 
     }
 }
