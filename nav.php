@@ -35,6 +35,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
+                            <!--
                             <li><a class="dropdown-item d-flex align-items-center" href="courses.php?category=programming">
                                     <i class="fas fa-code me-2"></i> Programming
                                 </a></li>
@@ -47,6 +48,7 @@
                             <li><a class="dropdown-item d-flex align-items-center" href="courses.php?category=marketing">
                                     <i class="fas fa-bullhorn me-2"></i> Marketing
                                 </a></li>
+-->
                         </ul>
                     </li>
                     <li class="nav-item">
