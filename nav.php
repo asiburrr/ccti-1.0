@@ -114,6 +114,9 @@
 
 <!-- Add Custom CSS for Enhanced Design -->
 <style>
+    body {
+        font-family: 'Roboto', sans-serif !important;
+    }
     :root {
         --primary-color: #00008b;
         --secondary-color: #6366f1;

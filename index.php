@@ -1,24 +1,25 @@
 <!-- File: header.php -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreDeft</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="card.css?1112">
     <!-- Custom CSS -->
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+
             background: #f8fafc;
         }
 
@@ -35,41 +36,46 @@
             }
         }
 
-        .hero-section {
-            background: linear-gradient(150deg, #f8fafc 50%, rgba(99, 102, 241, 0.05) 100%);
-            padding: 120px 0;
+
+
+                /* Hero Section */
+                .hero-section {
+            background: linear-gradient(145deg, rgba(248, 250, 252, 0.99) 0%, rgba(99, 102, 241, 0.04) 100%);
+            padding: 7rem 0 5rem;
             position: relative;
-            overflow: hidden;
         }
 
-        .hero-section::after {
+        .hero-section::before {
             content: '';
             position: absolute;
-            right: -10%;
-            top: -50%;
-            width: 70%;
-            height: 200%;
-            background: var(--gradient);
-            opacity: 0.05;
-            transform: rotate(15deg);
-            z-index: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(99, 102, 241, 0.07)" fill-opacity="1" d="M0,256L48,245.3C96,235,192,213,288,197.3C384,181,480,171,576,192C672,213,768,267,864,282.7C960,299,1056,277,1152,240C1248,203,1344,149,1392,122.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
+            background-position: bottom center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
         }
 
         .avatar-lg {
             width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid white;
-    margin-left: -10px;
-    /* Overlap avatars slightly */
-    transition: transform 0.3s ease;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-left: -10px;
+            /* Overlap avatars slightly */
+            transition: transform 0.3s ease;
         }
+
         .avatar-lg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
         .stat-pill {
             background: rgba(99, 102, 241, 0.2);
             color: var(--primary-color);
@@ -107,7 +113,7 @@
         .instructor-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
             opacity: 0;
             transition: all 0.3s ease;
             display: flex;
@@ -116,6 +122,7 @@
         }
     </style>
 </head>
+
 <body>
     <?php include('nav.php'); ?>
 
@@ -126,7 +133,7 @@
                 <div class="col-lg-6 animated-entry" style="animation-delay: 0.2s">
                     <h1 class="display-3 fw-bold mb-4">Master In-Demand<br><span class="color-primary">Professional Skills</span></h1>
                     <p class="lead text-muted mb-5">Every career growth journey is unique. We're here to guide you every step of the way.</p>
-                    
+
                     <div class="d-flex gap-3 mb-5">
                         <a href="#" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Explore Courses</a>
                         <a href="#" class="btn btn-outline-dark btn-lg px-5 py-3 rounded-pill">Watch Demo</a>
@@ -142,7 +149,7 @@
                     </div>
     -->
                 </div>
-                
+
                 <div class="col-lg-6 animated-entry" style="animation-delay: 0.4s">
                     <div class="position-relative">
                         <img src="undraw_personal-finance_98p3.svg" class="img-fluid rounded-4" alt="Online Learning">
@@ -249,4 +256,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -66,7 +66,7 @@
                 <div class="discounted-price">৳6500</div>
             </div>
             <div>
-                <button class="enroll-button">
+                <button class="enroll-button" onclick="{location.href='view'}">
                     Enroll Now
                     <i class="fas fa-arrow-right-long"></i>
                 </button>
@@ -142,7 +142,7 @@
                 <div class="discounted-price">৳6500</div>
             </div>
             <div>
-                <button class="enroll-button">
+                <button class="enroll-button" onclick="{location.href='view'}">
                     Enroll Now
                     <i class="fas fa-arrow-right-long"></i>
                 </button>
@@ -218,7 +218,7 @@
                 <div class="discounted-price">৳6500</div>
             </div>
             <div>
-                <button class="enroll-button">
+                <button class="enroll-button" onclick="{location.href='view'}">
                     Enroll Now
                     <i class="fas fa-arrow-right-long"></i>
                 </button>
