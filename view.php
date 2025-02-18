@@ -112,7 +112,7 @@
         }
 
         .exp {
-padding: 2px;
+            padding: 2px;
             background: rgba(0, 0, 139, 0.1);
             border-radius: 20px;
         }
@@ -252,7 +252,7 @@ padding: 2px;
                 <!-- Sidebar for mobile first -->
                 <div class="col-lg-4 order-lg-2">
 
-                    <div class="glass-card p-4 mb-3 rounded-lg shadow-sm bg-white" >
+                    <div class="glass-card p-4 mb-3 rounded-lg shadow-sm bg-white">
                         <h5 class="text-uppercase color-primary fw-semibold mb-3">Key Features</h5>
                         <ul class="list-unstyled m-0">
                             <li class="d-flex align-items-center py-3 border-bottom">
@@ -295,7 +295,7 @@ padding: 2px;
                             <div class="avatar">
                                 <img src="https://asiburrahman.com/img/aravi_3.jpg" width="50" height="50" class="rounded-circle shadow-sm" style="object-fit: cover;" alt="Asibur Rahman Aravi">
                             </div>
-                            
+
                             <div>
                                 <h5 class="mb-1 fw-semibold text-dark">Asibur Rahman Aravi</h5>
                                 <div class="d-flex align-items-center">
@@ -303,7 +303,7 @@ padding: 2px;
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -319,10 +319,10 @@ padding: 2px;
                         <form id="reviewForm" class="review-form">
                             <h4 class="color-primary">Write a Review</h4>
                             <div class="row g-3">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="star-rating">
                                         <fieldset class="d-flex gap-1 flex-row-reverse">
                                             <input type="radio" id="star5" name="rating" value="5">
