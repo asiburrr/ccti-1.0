@@ -145,6 +145,7 @@
             aspect-ratio: 3 / 2;
         }
 
+
         .star-rating input[type="radio"] {
             display: none;
         }
@@ -173,7 +174,9 @@
         .review-card:hover {
             transform: translateY(-5px);
         }
-
+        .edition-badge {
+    background: #00008b;
+}
         /* Responsive Design */
         @media (max-width: 992px) {
             .course-hero {
@@ -206,41 +209,42 @@
             </nav>
 
             <div class="row align-items-center">
-                <div class="col-lg-7 text-lg-start text-center mb-4 mb-lg-0">
-                    <h1 class="display-4 fw-bold mb-3">Computer Office Application</h1>
-                    <p class="lead text-muted mb-3">JAN-JUNE-2025</p>
-
-                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-3">
-                        <span class="badge bg-gradient-primary text-light rounded-pill px-3 py-2">
-                            <i class="fas fa-star me-1"></i> 5/5
-                        </span>
-                        <span class="badge bg-dark text-light rounded-pill px-3 py-2">
-                            <i class="fas fa-users me-1"></i> 1k+ Students
-                        </span>
-                    </div>
-
-                    <div class="mt-4 d-grid gap-3 d-lg-flex">
-                        <a href="#" class="btn btn-primary btn-lg rounded-pill shadow-sm px-4">
-                            <i class="fas fa-rocket me-2"></i>Enroll Now - ৳6500
-                            <small class="opacity-75 fs-6 text-light"><del>৳8500</del></small>
-                        </a>
-                        <a href="#details" class="btn btn-outline-dark btn-lg rounded-pill shadow-sm px-4">
-                            <i class="fas fa-file-contract me-2"></i>Details
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="glass-card rounded-4 shadow-sm overflow-hidden">
-                        <div class="ratio ratio-16x9">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-                                class="img-fluid rounded-4"
-                                alt="Course Preview"
-                                loading="lazy">
-                        </div>
-                    </div>
-                </div>
+    <!-- Image Column - Order first on mobile -->
+    <div class="col-lg-5 order-1 order-lg-2 mb-4 mb-lg-0">
+        <div class="glass-card rounded-4 shadow-sm overflow-hidden">
+            <div class="ratio">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+                    class="img-fluid rounded-4"
+                    alt="Course Preview"
+                    loading="lazy">
             </div>
+        </div>
+    </div>
+
+    <!-- Content Column - Order second on mobile -->
+    <div class="col-lg-7 order-2 order-lg-1 text-lg-start text-left" style="text-align: left;">
+        <h1 class="display-4 fw-bold mb-lg-5">Computer Office Application</h1>
+        <div class="d-flex flex-wrap justify-content-between justify-content-lg-start gap-3 mb-3">
+            <span class="badge bg-gradient-primary text-light rounded-pill px-3 py-2">
+                <i class="fas fa-star me-1"></i> 5/5
+            </span>
+            <span class="badge bg-dark text-light rounded-pill px-3 py-2">
+                <i class="fas fa-users me-1"></i> 1k+ Students
+            </span>
+            <span class="badge edition-badge text-light rounded-pill px-3 py-2">JAN-JUNE-2025</span>
+        </div>
+
+        <div class="mt-4 d-grid gap-3 d-lg-flex">
+            <a href="#" class="btn btn-primary btn-lg rounded-pill shadow-sm px-4">
+                <i class="fas fa-rocket me-2"></i>Enroll Now - ৳6500
+                <small class="opacity-75 fs-6 text-light"><del>৳8500</del></small>
+            </a>
+            <a href="#details" class="btn btn-outline-dark btn-lg rounded-pill shadow-sm px-4">
+                <i class="fas fa-file-contract me-2"></i>Details
+            </a>
+        </div>
+    </div>
+</div>
 
         </div>
     </section>
