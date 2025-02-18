@@ -351,7 +351,7 @@
                     <h5 class="mt-4 text-uppercase color-primary fw-semibold">Reviews</h5>
                     <div id="reviewsList" class="mt-4">
                         <!-- Sample Reviews -->
-                        <div class="review-card p-3">
+                        <div class="review-card p-3 shadow-sm">
                             <div class="d-flex align-items-center gap-3 mb-3">
                                 <div class="avatar avatar-sm">
                                     <img src="https://asiburrahman.com/img/aravi_3.jpg" width="40" height="40" style="object-fit: cover;" class="rounded-circle" alt="User">
