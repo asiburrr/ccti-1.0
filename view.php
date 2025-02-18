@@ -403,9 +403,9 @@
             const reviewsList = document.getElementById('reviewsList');
             const reviewCard = document.createElement('div');
 
-            reviewCard.className = 'review-card p-3';
+            reviewCard.className = 'review-card p-3 shadow-sm';
             reviewCard.innerHTML = `
-                <div class="d-flex align-items-center shadow-sm gap-3 mb-3">
+                <div class="d-flex align-items-center gap-3 mb-3">
                     <div class="avatar avatar-sm">
                         <img src="https://i.pravatar.cc/40?${Math.random()}" class="rounded-circle" alt="User">
                     </div>
