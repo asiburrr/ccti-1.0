@@ -1,14 +1,12 @@
-<!-- File: nav.php -->
 <header class="shadow-sm sticky-top">
     <nav class="navbar navbar-expand-xl navbar-light bg-white nav-glass">
         <div class="container">
-            <!-- Logo -->
+
             <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <img src="https://app.coredeft.com/img/favicon.ico" alt="CoreDeft Logo" width="50" class="me-2">
                 <span class="brand-name fw-bold color-primary">CoreDeft</span>
             </a>
 
-            <!-- Animated Hamburger Menu -->
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="toggler-bar top-bar"></span>
                 <span class="toggler-bar middle-bar"></span>
@@ -17,7 +15,7 @@
 
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="mainNav">
-                <!-- Left Navigation Links -->
+                <!-- Left Navigation -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link d-flex align-items-center" href="index.php">
@@ -48,7 +46,7 @@
                             <li><a class="dropdown-item d-flex align-items-center" href="courses.php?category=marketing">
                                     <i class="fas fa-bullhorn me-2"></i> Marketing
                                 </a></li>
--->
+                            -->
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -68,15 +66,11 @@
                     <div class="input-group ">
                         <input class="form-control rounded-pill focus search" type="search" name="query" placeholder="Search courses..." aria-label="Search">
                         <button class="btn btn-primary rounded-pill" type="submit">
-                            <i class="fas fa-search"></i> <!-- Font Awesome Search Icon -->
+                            <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </form>
-
-                <!-- Cart and User Account -->
                 <div class="d-flex align-items-center gap-3 cu">
-
-                    <!-- Login/Register or User Profile -->
                     <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
                         <div class="dropdown">
                             <a href="#" class="d-flex align-items-center text-decoration-none" role="button" data-bs-toggle="dropdown">
@@ -102,7 +96,7 @@
                         <a href="login.php" class="btn btn-outline-primary rounded-pill px-4 btnl">
                             <i class="fas fa-sign-in-alt me-2"></i> Login
                         </a>
-                        <a href="register.php" class="btn btn-primary rounded-pill px-4 btnr">
+                        <a href="register" class="btn btn-primary rounded-pill px-4 btnr">
                             <i class="fas fa-user-plus me-2"></i> Register
                         </a>
                     <?php endif; ?>
@@ -162,6 +156,7 @@
 
     .nav-glass {
         background: rgba(255, 255, 255, 0.8) !important;
+        background: linear-gradient(145deg, #0a1022 0%, #1a2540 100%);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }

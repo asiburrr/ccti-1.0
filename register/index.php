@@ -13,6 +13,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         body {
             background: linear-gradient(135deg, #f0f2f5, #e2e8f0);
@@ -301,284 +302,422 @@
 </head>
 
 <body>
-<?php include('../nav.php'); ?>
-<div class="container reg">
-    <div class="form-wrapper mt-5 mb-5">
-        <!-- Sidebar Progress -->
-        <div class="sidebar">
-            <div class="sidebar-header text-center">Sign Up</div>
-            <div class="step-item active" data-step="1">Personal</div>
-            <div class="step-item" data-step="2">Contact</div>
-            <div class="step-item" data-step="3">Family</div>
-            <div class="step-item" data-step="4">Education</div>
-            <div class="step-item" data-step="5">Identity</div>
-            <div class="step-item" data-step="6">Agreement</div>
-            <div class="progress-percentage" id="progressText">17% Complete</div>
-        </div>
+    <?php include('../nav.php'); ?>
+    <div class="container reg">
+        <div class="form-wrapper mt-5 mb-5">
+            <!-- Sidebar Progress -->
+            <div class="sidebar">
+                <div class="sidebar-header text-center">Sign Up</div>
+                <div class="step-item active" data-step="1">Personal</div>
+                <div class="step-item" data-step="2">Contact</div>
+                <div class="step-item" data-step="3">Family</div>
+                <div class="step-item" data-step="4">Education</div>
+                <div class="step-item" data-step="5">Identity</div>
+                <div class="step-item" data-step="6">Agreement</div>
+                <div class="progress-percentage" id="progressText">17% Complete</div>
+            </div>
 
-        <!-- Form Container -->
-        <div class="form-container">
-            <form id="signupForm" novalidate>
-                <!-- Step 1: Personal Details -->
-                <div class="step active" data-step="1">
-                    <div class="section-header">Personal Details</div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="first_name" placeholder="First Name" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="last_name" placeholder="Last Name" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <select name="gender" id="gender" class="form-control">
-                            <option value="" selected disabled>Select Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2 date-placeholder">
-                        <input type="date" class="form-control" id="dob" max="2010-01-01" data-placeholder="Date of Birth" required>
-                        <div class="invalid-feedback">Select date</div>
-                    </div>
-                </div>
-
-                <!-- Step 2: Contact Information -->
-                <div class="step" data-step="2">
-                    <div class="section-header">Contact Information</div>
-                    <div class="mb-2">
-                        <input type="email" class="form-control" id="email" placeholder="Email Address" required>
-                        <div class="invalid-feedback">Valid email</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="tel" class="form-control" id="user_number" placeholder="Your Phone" pattern="[0-9]{11}" required>
-                        <div class="invalid-feedback">11 digits</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="tel" class="form-control" id="guardian_number" placeholder="Guardian Phone" pattern="[0-9]{11}" required>
-                        <div class="invalid-feedback">11 digits</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="address" placeholder="Address" required>
-                        <div class="invalid-feedback">Min 2 letters</div>
-                    </div>
-                </div>
-
-                <!-- Step 3: Family Details -->
-                <div class="step" data-step="3">
-                    <div class="section-header">Family Details</div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="father_name" placeholder="Father's Name" pattern="[A-Za-z\s]{2,}" required>
-                        <div class="invalid-feedback">Min 2 letters</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="mother_name" placeholder="Mother's Name" pattern="[A-Za-z\s]{2,}" required>
-                        <div class="invalid-feedback">Min 2 letters</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="g_name" placeholder="Guardian's Name" pattern="[A-Za-z\s]{2,}" required>
-                        <div class="invalid-feedback">Min 2 letters</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="religion" placeholder="Religion" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                </div>
-
-                <!-- Step 4: Education Details -->
-                <div class="step" data-step="4">
-                    <div class="section-header">Education Details</div>
-                    <div class="mb-2">
-                        <select class="form-control" name="education_level" id="education_level" required>
-                            <option value="" selected disabled>Select Board</option>
-                            <option value="Mymensingh">Mymensingh</option>
-                        </select>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="education_level" placeholder="Education Level" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="institute" placeholder="Institute Name" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="number" class="form-control" id="passing_year" placeholder="Passing Year" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                </div>
-
-                <!-- Step 5: Identity Details -->
-                <div class="step" data-step="5">
-                    <div class="section-header">Identity Details</div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="roll" placeholder="Roll Number" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="registration" placeholder="Registration Number" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <select name="id_type" class="form-control" id="id_type" required>
-                            <option value="" selected disabled>Select Id Type</option>
-                            <option value="Birth Certificate">Birth Certificate</option>
-                            <option value="National ID Card">National ID Card</option>
-                        </select>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control" id="identification" placeholder="ID Number" required>
-                        <div class="invalid-feedback">Required</div>
-                    </div>
-                </div>
-
-                <!-- Step 6: Terms and Conditions -->
-                <div class="step" data-step="6">
-                    <div class="section-header">Terms and Conditions</div>
-                    <div class="terms-container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="terms" required>
-                            <label class="form-check-label" for="terms">
-                                I agree to the Terms and Conditions
-                            </label>
-                            <div class="invalid-feedback">Must agree</div>
+            <!-- Form Container -->
+            <div class="form-container">
+                <form id="signupForm" novalidate>
+                    <!-- Step 1: Personal Details -->
+                    <div class="step active" data-step="1">
+                        <div class="section-header">Personal Details</div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+                            <div class="invalid-feedback">First Name Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+                            <div class="invalid-feedback">Last Name Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <select name="gender" id="gender" class="form-control" required>
+                                <option value="" selected disabled>Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <div class="invalid-feedback">Gender Required</div>
+                        </div>
+                        <div class="mb-2 date-placeholder">
+                            <input type="date" class="form-control" name="dob" id="dob" max="2010-01-01" data-placeholder="Date of Birth" required>
+                            <div class="invalid-feedback">DOB Required</div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Navigation -->
-                <div class="d-flex justify-content-between mt-4 flex-column flex-md-row">
-                    <button type="button" class="btn btn-outline-secondary btn-navigate" id="prevBtn" disabled>Previous</button>
-                    <button type="button" class="btn btn-primary btn-navigate mt-2 mt-md-0" id="nextBtn">Next</button>
-                </div>
-            </form>
+                    <!-- Step 2: Contact Information -->
+                    <div class="step" data-step="2">
+                        <div class="section-header">Contact Information</div>
+                        <div class="mb-2">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                            <div class="invalid-feedback">Enter Valid email</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="tel" class="form-control" id="user_number" name="user_number" placeholder="Your Phone" pattern="[0-9]{11}" required>
+                            <div class="invalid-feedback">11 digits</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="tel" class="form-control" id="guardian_number" name="guardian_number" placeholder="Guardian Phone" pattern="[0-9]{11}" required>
+                            <div class="invalid-feedback">11 digits</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
+                            <div class="invalid-feedback">Address Min 2 letters</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Family Details -->
+                    <div class="step" data-step="3">
+                        <div class="section-header">Family Details</div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="father_name" name="father_name" placeholder="Father's Name" required>
+                            <div class="invalid-feedback">Father's Name Min 2 letters</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="mother_name" name="mother_name" placeholder="Mother's Name" required>
+                            <div class="invalid-feedback">Mother's Name Min 2 letters</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="guardian_name" name="guardian_name" placeholder="Guardian's Name" required>
+                            <div class="invalid-feedback">Guardian's Name Min 2 letters</div>
+                        </div>
+                        <div class="mb-2">
+                            <select name="religion" id="religion" class="form-control" required>
+                                <option value="" selected disabled>Select Religion</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Hinduism">Hinduism</option>
+                                <option value="Buddhism">Buddhism</option>
+                                <option value="Christianity">Christianity</option>
+                            </select>
+                            <div class="invalid-feedback">Religion Required</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Education Details -->
+                    <div class="step" data-step="4">
+                        <div class="section-header">Education Details</div>
+                        <div class="mb-2">
+                            <select class="form-control" name="education_board" id="education_board" required>
+                                <option value="" selected disabled>Select Board</option>
+                                <option value="Mymensingh">Mymensingh</option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Chattogram">Chattogram</option>
+                                <option value="Cumilla">Cumilla</option>
+                                <option value="Sylhet">Sylhet</option>
+                                <option value="Barisal">Barisal</option>
+                                <option value="Dinajpur">Dinajpur</option>
+                                <option value="Rajshahi">Rajshahi</option>
+                                <option value="Jashore">Jashore</option>
+                                <option value="Technical">Technical</option>
+                                <option value="Madrasah">Madrasah</option>
+                            </select>
+                            <div class="invalid-feedback">Education Board Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <select name="education_level" id="education_level" class="form-control" required>
+                                <option value="" selected disabled>Select Education Level</option>
+                                <option value="JSC">JSC</option>
+                                <option value="SSC">SSC</option>
+                            </select>
+                            <div class="invalid-feedback">Education Level Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="institute" name="institute" placeholder="Institute Name" required>
+                            <div class="invalid-feedback">Institute Name Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <select name="passing_year" id="passing_year" class="form-control" required>
+                                <option value="" selected disabled>Select Passing Year</option>
+                                <?php
+                                $currentYear = date("Y");
+                                for ($year = $currentYear; $year >= 1990; $year--) {
+                                    echo "<option value=\"$year\">$year</option>";
+                                }
+                                ?>
+                            </select>
+                            <div class="invalid-feedback">Passing Year Required</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Identity Details -->
+                    <div class="step" data-step="5">
+                        <div class="section-header">Identity Details</div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="roll" name="roll" placeholder="Roll Number" required>
+                            <div class="invalid-feedback">Roll Number Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="registration" name="registration" placeholder="Registration Number" required>
+                            <div class="invalid-feedback">Registration Number Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <select name="id_type" class="form-control" id="id_type" required>
+                                <option value="" selected disabled>Select Id Type</option>
+                                <option value="Birth Certificate">Birth Certificate</option>
+                                <option value="National ID Card">National ID Card</option>
+                            </select>
+                            <div class="invalid-feedback">Id Type Required</div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="identification" name="identification" placeholder="ID Number" required>
+                            <div class="invalid-feedback">ID Number Required</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Terms and Conditions -->
+                    <div class="step" data-step="6">
+                        <div class="section-header">Terms and Conditions</div>
+                        <div class="terms-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to the Terms and Conditions
+                                </label>
+                                <div class="invalid-feedback">Must agree</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="d-flex justify-content-between mt-4 flex-column flex-md-row">
+                        <button type="button" class="btn btn-outline-secondary btn-navigate" id="prevBtn" disabled>Previous</button>
+                        <button type="button" class="btn btn-primary btn-navigate mt-2 mt-md-0" id="nextBtn">Next</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    </div>
+    <!-- Toast Container (Updated) -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+    <template id="toast-template">
+        <div class="toast animate__animated animate__fadeInRight" role="alert" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+            <div class="toast-header" style="border-radius: 10px 10px 0 0;">
+                <i class="fas me-2"></i>
+                <strong class="me-auto"></strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body"></div>
+            <div class="progress" style="height: 5px; margin: 0; border-radius: 0 0 10px 10px; background-color: #ffffff;">
+                <div class="progress-bar" role="progressbar" style="width: 100%;"></div>
+            </div>
+        </div>
+    </template>
+</div>
     <?php include('../footer.php'); ?>
 
     <script>
-        const steps = document.querySelectorAll('.step');
-        const stepItems = document.querySelectorAll('.step-item');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const form = document.getElementById('signupForm');
-        const progressText = document.getElementById('progressText');
-        let currentStep = 1;
+    // Toast creation function
+    function showToast(message, type = 'error') {
+        const template = document.getElementById('toast-template');
+        const toastEl = template.content.cloneNode(true).querySelector('.toast');
+        const container = document.querySelector('.toast-container');
+        
+        // Configure toast based on type
+        const isSuccess = type === 'success';
+        toastEl.classList.add(isSuccess ? 'bg-success' : 'bg-danger', 'text-white');
+        const header = toastEl.querySelector('.toast-header');
+        header.classList.add(isSuccess ? 'bg-success' : 'bg-danger', 'text-white');
+        
+        // Set icon and title
+        const icon = toastEl.querySelector('.fas');
+        icon.classList.add(isSuccess ? 'fa-check-circle' : 'fa-exclamation-circle');
+        header.querySelector('strong').textContent = isSuccess ? 'Success' : 'Error';
+        
+        // Set message
+        toastEl.querySelector('.toast-body').textContent = message;
+        
+        // Append and show
+        container.appendChild(toastEl);
+        const toast = new bootstrap.Toast(toastEl, { autohide: true, delay: 5000 });
+        
+        // Progress bar animation
+        const progressBar = toastEl.querySelector('.progress-bar');
+        progressBar.classList.add(isSuccess ? 'bg-success' : 'bg-danger');
+        let width = 100;
+        const interval = 50;
+        const decrement = (interval / 5000) * 100;
+        
+        const intervalId = setInterval(() => {
+            width -= decrement;
+            if (width <= 0) {
+                width = 0;
+                clearInterval(intervalId);
+            }
+            progressBar.style.width = `${width}%`;
+        }, interval);
+        
+        toastEl.addEventListener('hidden.bs.toast', () => {
+            clearInterval(intervalId);
+            toastEl.remove();
+        });
+        
+        toast.show();
+    }
 
-        // Load saved data
-        function loadSavedData() {
-            const savedData = JSON.parse(localStorage.getItem('signupFormData') || '{}');
-            Object.entries(savedData).forEach(([key, value]) => {
-                const field = form.querySelector(`#${key}`);
-                if (field) {
-                    if (field.type === 'checkbox') field.checked = value === 'on';
-                    else field.value = value;
+    // Your existing variables and functions remain largely the same
+    const steps = document.querySelectorAll('.step');
+    const stepItems = document.querySelectorAll('.step-item');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const form = document.getElementById('signupForm');
+    const progressText = document.getElementById('progressText');
+    let currentStep = 1;
+
+    function loadSavedData() {
+        const savedData = JSON.parse(localStorage.getItem('signupFormData') || '{}');
+        Object.entries(savedData).forEach(([key, value]) => {
+            const field = form.querySelector(`#${key}`);
+            if (field) {
+                if (field.type === 'checkbox') field.checked = value === 'on';
+                else field.value = value;
+            }
+        });
+    }
+
+    function saveData() {
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        localStorage.setItem('signupFormData', JSON.stringify(data));
+    }
+
+    function updateProgress() {
+        const totalFields = form.querySelectorAll('input, select, textarea, checkbox').length;
+        const filledFields = Array.from(form.querySelectorAll('input, select, textarea, checkbox'))
+            .filter(field => field.type === 'checkbox' ? field.checked : field.value.trim() !== '').length;
+        const percentage = Math.round((filledFields / totalFields) * 100);
+        progressText.textContent = `${percentage}% Complete`;
+
+        stepItems.forEach(item => {
+            const step = parseInt(item.dataset.step);
+            item.classList.toggle('active', step === currentStep);
+        });
+    }
+
+    function showStep(step) {
+        steps.forEach(s => s.classList.remove('active'));
+        steps[step - 1].classList.add('active');
+        prevBtn.disabled = step === 1;
+        nextBtn.textContent = step === steps.length ? 'Submit' : 'Next';
+        nextBtn.classList.toggle('btn-success', step === steps.length);
+        nextBtn.classList.toggle('btn-primary', step !== steps.length);
+        updateProgress();
+    }
+
+    function validateStep(step) {
+        const inputs = steps[step - 1].querySelectorAll('input, select, textarea, checkbox');
+        let isValid = true;
+        inputs.forEach(input => {
+            input.classList.add('was-validated');
+            if (!input.checkValidity()) {
+                isValid = false;
+                const feedback = input.nextElementSibling;
+                if (feedback && feedback.classList.contains('invalid-feedback')) {
+                    showToast(feedback.textContent, 'error');
                 }
-            });
-        }
-
-        // Save data
-        function saveData() {
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            localStorage.setItem('signupFormData', JSON.stringify(data));
-        }
-
-        function updateProgress() {
-            const totalFields = form.querySelectorAll('input, select, textarea').length;
-            const filledFields = Array.from(form.querySelectorAll('input, select, textarea'))
-                .filter(field => field.type === 'checkbox' ? field.checked : field.value.trim() !== '').length;
-            const percentage = Math.round((filledFields / totalFields) * 100);
-            progressText.textContent = `${percentage}% Complete`;
-
-            stepItems.forEach(item => {
-                const step = parseInt(item.dataset.step);
-                item.classList.toggle('active', step === currentStep);
-            });
-        }
-
-        function showStep(step) {
-            steps.forEach(s => s.classList.remove('active'));
-            steps[step - 1].classList.add('active');
-            prevBtn.disabled = step === 1;
-            nextBtn.textContent = step === steps.length ? 'Submit' : 'Next';
-            nextBtn.classList.toggle('btn-success', step === steps.length);
-            nextBtn.classList.toggle('btn-primary', step !== steps.length);
-            updateProgress();
-        }
-
-        function validateStep(step) {
-            const inputs = steps[step - 1].querySelectorAll('input, select, textarea');
-            let isValid = true;
-            inputs.forEach(input => {
+            }
+            input.addEventListener('input', () => {
                 input.classList.add('was-validated');
-                if (!input.checkValidity()) isValid = false;
-                input.addEventListener('input', () => {
-                    input.classList.add('was-validated');
+                saveData();
+                updateProgress();
+            }, { once: true });
+            if (input.type === 'checkbox') {
+                input.addEventListener('change', () => {
                     saveData();
                     updateProgress();
-                });
-                if (input.type === 'checkbox') {
-                    input.addEventListener('change', () => {
-                        saveData();
-                        updateProgress();
-                    });
-                }
-            });
-            return isValid;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentStep > 1) {
-                currentStep--;
-                showStep(currentStep);
+                }, { once: true });
             }
         });
+        return isValid;
+    }
 
-        nextBtn.addEventListener('click', () => {
-            if (validateStep(currentStep)) {
-                if (currentStep < steps.length) {
-                    currentStep++;
-                    showStep(currentStep);
+    const emailInput = document.getElementById('email');
+    emailInput.addEventListener('blur', () => {
+        const email = emailInput.value;
+        if (email) {
+            fetch('process', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `field=email&value=${encodeURIComponent(email)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.valid) {
+                    emailInput.classList.remove('is-invalid');
+                    emailInput.classList.add('is-valid');
                 } else {
-                    const formData = new FormData(form);
-                    const data = Object.fromEntries(formData);
-                    console.log('Submitted Data:', data);
-                    alert('Registration Complete!\nCheck console for data.');
-                    localStorage.removeItem('signupFormData');
-                    form.reset();
-                    currentStep = 1;
-                    showStep(currentStep);
-                    steps.forEach(step => step.querySelectorAll('.was-validated')
-                        .forEach(el => el.classList.remove('was-validated')));
+                    emailInput.classList.remove('is-valid');
+                    emailInput.classList.add('is-invalid');
+                    const message = data.errors?.email || 'Invalid email';
+                    showToast(message, 'error');
                 }
+            })
+            .catch(error => showToast('Email validation failed', 'error'));
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (validateStep(currentStep)) {
+            if (currentStep < steps.length) {
+                currentStep++;
+                showStep(currentStep);
             } else {
-                alert('Please fill all required fields.');
+                const formData = new FormData(form);
+                fetch('process', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showToast('Registration successful!', 'success');
+                        localStorage.removeItem('signupFormData');
+                        form.reset();
+                        currentStep = 1;
+                        showStep(currentStep);
+                        steps.forEach(step => step.querySelectorAll('.was-validated')
+                            .forEach(el => el.classList.remove('was-validated')));
+                    } else {
+                        const message = data.message || 'Check form for errors';
+                        showToast(message, 'error');
+                        if (data.errors) {
+                            Object.entries(data.errors).forEach(([field, error]) => {
+                                const input = form.querySelector(`#${field}`);
+                                if (input) {
+                                    input.classList.add('is-invalid');
+                                    showToast(`${field}: ${error}`, 'error');
+                                }
+                            });
+                        }
+                    }
+                })
+                .catch(error => showToast('Form submission failed', 'error'));
             }
-        });
+        }
+    });
 
-        // Initial setup
-        loadSavedData();
-        showStep(currentStep);
+    loadSavedData();
+    showStep(currentStep);
 
-        // Enter key navigation
-        form.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                nextBtn.click();
-            }
-        });
-    </script>
+    form.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            nextBtn.click();
+        }
+    });
+</script>
 </body>
 
 </html>
