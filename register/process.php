@@ -4,7 +4,8 @@ header('Content-Type: application/json');
 require_once '../conn.php';
 
 // Validation function for form data
-function validateForm($data) {
+function validateForm($data)
+{
     $errors = [];
 
     // First Name
@@ -118,6 +119,13 @@ function validateForm($data) {
         $errors['terms'] = 'You must agree to the terms and conditions.';
     }
 
+    // Password validation
+    if (empty($data['password'])) {
+        $errors['password'] = 'Password is required';
+    } elseif (strlen($data['password']) < 6) {
+        $errors['password'] = 'Password must be at least 6 characters';
+    }
+
     return $errors;
 }
 
@@ -155,14 +163,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Compute full_name as first_name + last_name
                 $full_name = $data['first_name'] . ' ' . $data['last_name'];
 
+                // Hash password using PASSWORD_DEFAULT (bcrypt)
+                $hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
+                // Generate and store user token
+                $userToken = bin2hex(random_bytes(32));
+                $_SESSION['user_token'] = $userToken;
+                setcookie("user_token", $userToken, time() + (200 * 24 * 3600), "/");
+                setcookie("user_type", "user", time() + (200 * 24 * 3600), "/");
+
                 $stmt = $pdo->prepare('INSERT INTO users (
                     first_name, last_name, full_name, education_level, roll, registration, institute, 
                     passing_year, board, dob, id_type, id_no, father_name, mother_name, address, 
-                    email, user_number, guardian_number, guardian_name, gender, religion, terms
+                    email, user_number, guardian_number, guardian_name, gender, religion, terms,
+                    password, token
                 ) VALUES (
                     :first_name, :last_name, :full_name, :education_level, :roll, :registration, :institute, 
                     :passing_year, :board, :dob, :id_type, :id_no, :father_name, :mother_name, :address, 
-                    :email, :user_number, :guardian_number, :guardian_name, :gender, :religion, :terms
+                    :email, :user_number, :guardian_number, :guardian_name, :gender, :religion, :terms,
+                    :password, :token
                 )');
 
                 $stmt->execute([
@@ -174,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'registration' => $data['registration'],
                     'institute' => $data['institute'],
                     'passing_year' => $data['passing_year'],
-                    'board' => $data['education_board'], // Match database column 'board'
+                    'board' => $data['education_board'],
                     'dob' => $data['dob'],
                     'id_type' => $data['id_type'],
                     'id_no' => $data['identification'],
@@ -187,7 +205,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'guardian_name' => $data['guardian_name'],
                     'gender' => $data['gender'],
                     'religion' => $data['religion'],
-                    'terms' => 1 // since it's checked
+                    'terms' => 1,
+                    'password' => $hashedPassword,
+                    'token' => $userToken
                 ]);
 
                 echo json_encode(['success' => true, 'message' => 'Registration successful']);

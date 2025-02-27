@@ -483,7 +483,43 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- Password Modal -->
+                    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="passwordModalLabel">Set Your Password</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3 position-relative">
+                                        <label for="password" class="form-label">Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                                            <button type="button" class="btn btn-outline-secondary toggle-password" data-target="password">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">Password must be at least 8 characters long</div>
+                                    </div>
+                                    <div class="mb-3 position-relative">
+                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="confirmPassword" placeholder="Enter confirm password" required>
+                                            <button type="button" class="btn btn-outline-secondary toggle-password" data-target="confirmPassword">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">Passwords must match the first password</div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary" id="submitPassword">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Navigation -->
                     <div class="d-flex justify-content-between mt-4 flex-column flex-md-row">
                         <button type="button" class="btn btn-outline-secondary btn-navigate" id="prevBtn" disabled>Previous</button>
@@ -493,231 +529,322 @@
             </div>
         </div>
     </div>
-    <!-- Toast Container (Updated) -->
-<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
-    <template id="toast-template">
-        <div class="toast animate__animated animate__fadeInRight" role="alert" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
-            <div class="toast-header" style="border-radius: 10px 10px 0 0;">
-                <i class="fas me-2"></i>
-                <strong class="me-auto"></strong>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+    <!-- Toast Container - Increased z-index to 1050 to appear above modal -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+        <template id="toast-template">
+            <div class="toast animate__animated animate__fadeInRight" role="alert" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+                <div class="toast-header" style="border-radius: 10px 10px 0 0;">
+                    <i class="fas me-2"></i>
+                    <strong class="me-auto"></strong>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body"></div>
+                <div class="progress" style="height: 5px; margin: 0; border-radius: 0 0 10px 10px; background-color: #ffffff;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%;"></div>
+                </div>
             </div>
-            <div class="toast-body"></div>
-            <div class="progress" style="height: 5px; margin: 0; border-radius: 0 0 10px 10px; background-color: #ffffff;">
-                <div class="progress-bar" role="progressbar" style="width: 100%;"></div>
-            </div>
-        </div>
-    </template>
-</div>
+        </template>
+    </div>
     <?php include('../footer.php'); ?>
 
     <script>
-    // Toast creation function
-    function showToast(message, type = 'error') {
-        const template = document.getElementById('toast-template');
-        const toastEl = template.content.cloneNode(true).querySelector('.toast');
-        const container = document.querySelector('.toast-container');
-        
-        // Configure toast based on type
-        const isSuccess = type === 'success';
-        toastEl.classList.add(isSuccess ? 'bg-success' : 'bg-danger', 'text-white');
-        const header = toastEl.querySelector('.toast-header');
-        header.classList.add(isSuccess ? 'bg-success' : 'bg-danger', 'text-white');
-        
-        // Set icon and title
-        const icon = toastEl.querySelector('.fas');
-        icon.classList.add(isSuccess ? 'fa-check-circle' : 'fa-exclamation-circle');
-        header.querySelector('strong').textContent = isSuccess ? 'Success' : 'Error';
-        
-        // Set message
-        toastEl.querySelector('.toast-body').textContent = message;
-        
-        // Append and show
-        container.appendChild(toastEl);
-        const toast = new bootstrap.Toast(toastEl, { autohide: true, delay: 5000 });
-        
-        // Progress bar animation
-        const progressBar = toastEl.querySelector('.progress-bar');
-        progressBar.classList.add(isSuccess ? 'bg-success' : 'bg-danger');
-        let width = 100;
-        const interval = 50;
-        const decrement = (interval / 5000) * 100;
-        
-        const intervalId = setInterval(() => {
-            width -= decrement;
-            if (width <= 0) {
-                width = 0;
-                clearInterval(intervalId);
-            }
-            progressBar.style.width = `${width}%`;
-        }, interval);
-        
-        toastEl.addEventListener('hidden.bs.toast', () => {
-            clearInterval(intervalId);
-            toastEl.remove();
-        });
-        
-        toast.show();
-    }
+        // Toast creation function
+        function showToast(message, type = 'error') {
+            const template = document.getElementById('toast-template');
+            const toastEl = template.content.cloneNode(true).querySelector('.toast');
+            const container = document.querySelector('.toast-container');
 
-    // Your existing variables and functions remain largely the same
-    const steps = document.querySelectorAll('.step');
-    const stepItems = document.querySelectorAll('.step-item');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const form = document.getElementById('signupForm');
-    const progressText = document.getElementById('progressText');
-    let currentStep = 1;
+            // Configure toast based on type
+            const isSuccess = type === 'success';
+            toastEl.classList.add(isSuccess ? 'bg-success' : 'bg-danger', 'text-white');
+            const header = toastEl.querySelector('.toast-header');
+            header.classList.add(isSuccess ? 'bg-success' : 'bg-danger', 'text-white');
 
-    function loadSavedData() {
-        const savedData = JSON.parse(localStorage.getItem('signupFormData') || '{}');
-        Object.entries(savedData).forEach(([key, value]) => {
-            const field = form.querySelector(`#${key}`);
-            if (field) {
-                if (field.type === 'checkbox') field.checked = value === 'on';
-                else field.value = value;
-            }
-        });
-    }
+            // Set icon and title
+            const icon = toastEl.querySelector('.fas');
+            icon.classList.add(isSuccess ? 'fa-check-circle' : 'fa-exclamation-circle');
+            header.querySelector('strong').textContent = isSuccess ? 'Success' : 'Error';
 
-    function saveData() {
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        localStorage.setItem('signupFormData', JSON.stringify(data));
-    }
+            // Set message
+            toastEl.querySelector('.toast-body').textContent = message;
 
-    function updateProgress() {
-        const totalFields = form.querySelectorAll('input, select, textarea, checkbox').length;
-        const filledFields = Array.from(form.querySelectorAll('input, select, textarea, checkbox'))
-            .filter(field => field.type === 'checkbox' ? field.checked : field.value.trim() !== '').length;
-        const percentage = Math.round((filledFields / totalFields) * 100);
-        progressText.textContent = `${percentage}% Complete`;
+            // Append and show
+            container.appendChild(toastEl);
+            const toast = new bootstrap.Toast(toastEl, {
+                autohide: true,
+                delay: 5000
+            });
 
-        stepItems.forEach(item => {
-            const step = parseInt(item.dataset.step);
-            item.classList.toggle('active', step === currentStep);
-        });
-    }
+            // Progress bar animation
+            const progressBar = toastEl.querySelector('.progress-bar');
+            progressBar.classList.add(isSuccess ? 'bg-success' : 'bg-danger');
+            let width = 100;
+            const interval = 50;
+            const decrement = (interval / 5000) * 100;
 
-    function showStep(step) {
-        steps.forEach(s => s.classList.remove('active'));
-        steps[step - 1].classList.add('active');
-        prevBtn.disabled = step === 1;
-        nextBtn.textContent = step === steps.length ? 'Submit' : 'Next';
-        nextBtn.classList.toggle('btn-success', step === steps.length);
-        nextBtn.classList.toggle('btn-primary', step !== steps.length);
-        updateProgress();
-    }
-
-    function validateStep(step) {
-        const inputs = steps[step - 1].querySelectorAll('input, select, textarea, checkbox');
-        let isValid = true;
-        inputs.forEach(input => {
-            input.classList.add('was-validated');
-            if (!input.checkValidity()) {
-                isValid = false;
-                const feedback = input.nextElementSibling;
-                if (feedback && feedback.classList.contains('invalid-feedback')) {
-                    showToast(feedback.textContent, 'error');
+            const intervalId = setInterval(() => {
+                width -= decrement;
+                if (width <= 0) {
+                    width = 0;
+                    clearInterval(intervalId);
                 }
+                progressBar.style.width = `${width}%`;
+            }, interval);
+
+            toastEl.addEventListener('hidden.bs.toast', () => {
+                clearInterval(intervalId);
+                toastEl.remove();
+            });
+
+            toast.show();
+        }
+
+        // Password visibility toggle
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.target;
+                const input = document.getElementById(targetId);
+                const icon = button.querySelector('i');
+
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+
+        const steps = document.querySelectorAll('.step');
+        const stepItems = document.querySelectorAll('.step-item');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const form = document.getElementById('signupForm');
+        const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const submitPasswordBtn = document.getElementById('submitPassword');
+        const progressText = document.getElementById('progressText');
+        let currentStep = 1;
+
+        function validatePasswords() {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+            let isValid = true;
+            let errors = [];
+
+            passwordInput.classList.add('was-validated');
+            confirmPasswordInput.classList.add('was-validated');
+
+            if (password.length < 6) {
+                passwordInput.classList.add('is-invalid');
+                errors.push('Password must be at least 6 characters long');
+                isValid = false;
+            } else {
+                passwordInput.classList.remove('is-invalid');
             }
-            input.addEventListener('input', () => {
+
+            if (password !== confirmPassword) {
+                confirmPasswordInput.classList.add('is-invalid');
+                errors.push('Confirm password must match the password you entered');
+                isValid = false;
+            } else {
+                confirmPasswordInput.classList.remove('is-invalid');
+            }
+
+            if (!isValid) {
+                errors.forEach(error => showToast(error, 'error'));
+            }
+
+            return isValid;
+        }
+
+        function loadSavedData() {
+            const savedData = JSON.parse(localStorage.getItem('signupFormData') || '{}');
+            Object.entries(savedData).forEach(([key, value]) => {
+                const field = form.querySelector(`#${key}`);
+                if (field) {
+                    if (field.type === 'checkbox') field.checked = value === 'on';
+                    else field.value = value;
+                }
+            });
+        }
+
+        function saveData() {
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            localStorage.setItem('signupFormData', JSON.stringify(data));
+        }
+
+        function updateProgress() {
+            const totalFields = form.querySelectorAll('input, select, textarea, checkbox').length;
+            const filledFields = Array.from(form.querySelectorAll('input, select, textarea, checkbox'))
+                .filter(field => field.type === 'checkbox' ? field.checked : field.value.trim() !== '').length;
+            const percentage = Math.round((filledFields / totalFields) * 100);
+            progressText.textContent = `${percentage}% Complete`;
+
+            stepItems.forEach(item => {
+                const step = parseInt(item.dataset.step);
+                item.classList.toggle('active', step === currentStep);
+            });
+        }
+
+        function showStep(step) {
+            steps.forEach(s => s.classList.remove('active'));
+            steps[step - 1].classList.add('active');
+            prevBtn.disabled = step === 1;
+            nextBtn.textContent = step === steps.length ? 'Submit' : 'Next';
+            nextBtn.classList.toggle('btn-success', step === steps.length);
+            nextBtn.classList.toggle('btn-primary', step !== steps.length);
+            updateProgress();
+        }
+
+        function validateStep(step) {
+            const inputs = steps[step - 1].querySelectorAll('input, select, textarea, checkbox');
+            let isValid = true;
+            inputs.forEach(input => {
                 input.classList.add('was-validated');
-                saveData();
-                updateProgress();
-            }, { once: true });
-            if (input.type === 'checkbox') {
-                input.addEventListener('change', () => {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                    const feedback = input.nextElementSibling;
+                    if (feedback && feedback.classList.contains('invalid-feedback')) {
+                        showToast(feedback.textContent, 'error');
+                    }
+                }
+                input.addEventListener('input', () => {
+                    input.classList.add('was-validated');
                     saveData();
                     updateProgress();
-                }, { once: true });
+                }, {
+                    once: true
+                });
+                if (input.type === 'checkbox') {
+                    input.addEventListener('change', () => {
+                        saveData();
+                        updateProgress();
+                    }, {
+                        once: true
+                    });
+                }
+            });
+            return isValid;
+        }
+
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('blur', () => {
+            const email = emailInput.value;
+            if (email) {
+                fetch('process', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: `field=email&value=${encodeURIComponent(email)}`
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.valid) {
+                            emailInput.classList.remove('is-invalid');
+                            emailInput.classList.add('is-valid');
+                        } else {
+                            emailInput.classList.remove('is-valid');
+                            emailInput.classList.add('is-invalid');
+                            const message = data.errors?.email || 'Invalid email';
+                            showToast(message, 'error');
+                        }
+                    })
+                    .catch(error => showToast('Email validation failed', 'error'));
             }
         });
-        return isValid;
-    }
 
-    const emailInput = document.getElementById('email');
-    emailInput.addEventListener('blur', () => {
-        const email = emailInput.value;
-        if (email) {
-            fetch('process', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: `field=email&value=${encodeURIComponent(email)}`
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.valid) {
-                    emailInput.classList.remove('is-invalid');
-                    emailInput.classList.add('is-valid');
+        nextBtn.addEventListener('click', () => {
+            if (validateStep(currentStep)) {
+                if (currentStep < steps.length) {
+                    currentStep++;
+                    showStep(currentStep);
                 } else {
-                    emailInput.classList.remove('is-valid');
-                    emailInput.classList.add('is-invalid');
-                    const message = data.errors?.email || 'Invalid email';
-                    showToast(message, 'error');
+                    passwordModal.show();
                 }
-            })
-            .catch(error => showToast('Email validation failed', 'error'));
-        }
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (currentStep > 1) {
-            currentStep--;
-            showStep(currentStep);
-        }
-    });
-
-    nextBtn.addEventListener('click', () => {
-        if (validateStep(currentStep)) {
-            if (currentStep < steps.length) {
-                currentStep++;
-                showStep(currentStep);
-            } else {
-                const formData = new FormData(form);
-                fetch('process', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        showToast('Registration successful!', 'success');
-                        localStorage.removeItem('signupFormData');
-                        form.reset();
-                        currentStep = 1;
-                        showStep(currentStep);
-                        steps.forEach(step => step.querySelectorAll('.was-validated')
-                            .forEach(el => el.classList.remove('was-validated')));
-                    } else {
-                        const message = data.message || 'Check form for errors';
-                        showToast(message, 'error');
-                        if (data.errors) {
-                            Object.entries(data.errors).forEach(([field, error]) => {
-                                const input = form.querySelector(`#${field}`);
-                                if (input) {
-                                    input.classList.add('is-invalid');
-                                    showToast(`${field}: ${error}`, 'error');
-                                }
-                            });
-                        }
-                    }
-                })
-                .catch(error => showToast('Form submission failed', 'error'));
             }
-        }
-    });
+        });
 
-    loadSavedData();
-    showStep(currentStep);
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        });
 
-    form.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            nextBtn.click();
-        }
-    });
-</script>
+        submitPasswordBtn.addEventListener('click', () => {
+            if (validatePasswords()) {
+                const formData = new FormData(form);
+                formData.append('password', passwordInput.value);
+
+                fetch('process', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showToast('Registration successfull!', 'success');
+                            // Only clear localStorage and form on successful final submission
+                            localStorage.removeItem('signupFormData');
+                            form.reset();
+                            passwordModal.hide();
+                            passwordInput.value = '';
+                            confirmPasswordInput.value = '';
+                            currentStep = 1;
+                            showStep(currentStep);
+                            steps.forEach(step => step.querySelectorAll('.was-validated')
+                                .forEach(el => el.classList.remove('was-validated')));
+                        } else {
+                            const message = data.message || 'Please check the form for errors';
+                            showToast(message, 'error');
+                            if (data.errors) {
+                                Object.entries(data.errors).forEach(([field, error]) => {
+                                    const input = form.querySelector(`#${field}`);
+                                    if (input) {
+                                        input.classList.add('is-invalid');
+                                        // Make error messages more user-friendly
+                                        let friendlyError = error;
+                                        if (field === 'password') {
+                                            friendlyError = `Your password ${error.toLowerCase()}`;
+                                        } else if (field === 'email') {
+                                            friendlyError = `The email ${error.toLowerCase()}`;
+                                        } else {
+                                            friendlyError = `${field.replace('_', ' ')} ${error.toLowerCase()}`;
+                                        }
+                                        showToast(friendlyError, 'error');
+                                    }
+                                });
+                            }
+                        }
+                    })
+                    .catch(error => showToast('Something went wrong with submission: ' + error.message, 'error'));
+            }
+        });
+
+        document.getElementById('passwordModal').addEventListener('hidden.bs.modal', () => {
+            passwordInput.classList.remove('was-validated', 'is-invalid');
+            confirmPasswordInput.classList.remove('was-validated', 'is-invalid');
+            passwordInput.value = '';
+            confirmPasswordInput.value = '';
+        });
+
+        loadSavedData();
+        showStep(currentStep);
+
+        form.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                nextBtn.click();
+            }
+        });
+    </script>
 </body>
 
 </html>

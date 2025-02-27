@@ -239,7 +239,6 @@ $transactions = [
 
         .nav-item.active {
             color: var(--primary-color);
-            animation: bounce 1s infinite;
         }
 
         .nav-item.active i {
@@ -488,7 +487,7 @@ $transactions = [
                 ['icon' => 'fa-house', 'label' => 'Home', 'active' => true, 'toggle' => false],
                 ['icon' => 'fa-book-open', 'label' => 'Courses', 'active' => false, 'toggle' => false],
                 ['icon' => 'fa-wallet', 'label' => 'Wallet', 'active' => false, 'toggle' => false],
-                ['icon' => 'fa-user', 'label' => 'Profile', 'active' => false, 'toggle' => true]
+                ['icon' => 'fa-bars', 'label' => 'Menu', 'active' => false, 'toggle' => true]
             ] as $nav): ?>
             <a href="#" class="nav-item <?= $nav['active'] ? 'active' : '' ?> <?= $nav['toggle'] ? 'profile-toggle' : '' ?>" 
                <?= $nav['toggle'] ? 'onclick="toggleSidebar()"' : '' ?>>

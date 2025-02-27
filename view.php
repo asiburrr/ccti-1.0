@@ -198,58 +198,68 @@
 <body>
     <?php include('nav.php'); ?>
 
-    <!-- Hero Section -->
-    <section class="course-hero">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb breadcrumb-pro">
-                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home fa-sm"></i> Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Course</a></li>
-                    <li class="breadcrumb-item"><a href="#">Computer</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Computer Office Application</li>
-                </ol>
-            </nav>
+<!-- Hero Section -->
+<section class="course-hero">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-pro animate__animated animate__fadeInDown" style="animation-delay: 0.2s;">
+                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home fa-sm"></i> Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Courses</a></li>
+                <li class="breadcrumb-item"><a href="#">Computer Skills</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Office Applications</li>
+            </ol>
+        </nav>
 
-            <div class="row align-items-center">
-                <!-- Image Column - Order first on mobile -->
-                <div class="col-lg-5 order-1 order-lg-2 mb-4 mb-lg-0">
-                    <div class="glass-card rounded-4 shadow-sm overflow-hidden">
-                        <div class="ratio">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-                                class="img-fluid rounded-4"
-                                alt="Course Preview"
-                                loading="lazy">
-                        </div>
+        <div class="row align-items-center">
+            <!-- Image Column - Order first on mobile -->
+            <div class="col-lg-5 order-1 order-lg-2 mb-4 mb-lg-0">
+                <div class="glass-card rounded-4 shadow-sm overflow-hidden position-relative animate__animated animate__zoomIn" style="animation-delay: 0.4s;">
+                    <div class="ratio">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4"
+                            class="img-fluid rounded-4"
+                            alt="Professional Office Application Training"
+                            loading="lazy">
                     </div>
-                </div>
-
-                <!-- Content Column - Order second on mobile -->
-                <div class="col-lg-7 order-2 order-lg-1 text-lg-start text-left" style="text-align: left;">
-                    <h1 class="display-4 fw-bold mb-lg-5">Computer Office Application</h1>
-                    <div class="d-flex flex-wrap justify-content-between justify-content-lg-start gap-3 mb-3">
-                        <span class="badge bg-gradient-primary text-light rounded-pill px-3 py-2">
-                            <i class="fas fa-star me-1"></i> 5/5
-                        </span>
-                        <span class="badge bg-dark text-light rounded-pill px-3 py-2">
-                            <i class="fas fa-users me-1"></i> 1k+ Students
-                        </span>
-                        <span class="badge edition-badge text-light rounded-pill px-3 py-2">JAN-JUNE-2025</span>
-                    </div>
-
-                    <div class="mt-4 d-grid gap-3 d-lg-flex">
-                        <a href="#" class="btn btn-primary btn-lg rounded-pill shadow-sm px-4">
-                            <i class="fas fa-rocket me-2"></i>Enroll Now - ৳6500
-                            <small class="opacity-75 fs-6 text-light"><del>৳8500</del></small>
-                        </a>
-                        <a href="#details" class="btn btn-outline-dark btn-lg rounded-pill shadow-sm px-4">
-                            <i class="fas fa-file-contract me-2"></i>Details
-                        </a>
+                    <div class="position-absolute top-0 end-0 m-3">
+                        <span class="badge bg-warning text-light rounded-pill px-2 py-1 animate__animated animate__pulse animate__infinite">Popular</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Content Column - Order second on mobile -->
+            <div class="col-lg-7 order-2 order-lg-1 text-lg-start text-left" style="text-align: left;">
+                <h1 class="display-4 fw-bold mb-4 text-dark animate__animated animate__fadeInLeft" style="animation-delay: 0.3s;">
+                Computer Office Application
+                </h1>
+                <div class="d-flex flex-wrap justify-content-between justify-content-lg-start gap-3 mb-4 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                    <span class="badge bg-gradient-primary text-light rounded-pill px-3 py-2 shadow-sm">
+                        <i class="fas fa-star me-1"></i>  300+ 5 Stars
+                    </span>
+                    <span class="badge bg-dark text-light rounded-pill px-3 py-2 shadow-sm">
+                        <i class="fas fa-users me-1"></i>  1000+ Students
+                    </span>
+                    <span class="badge edition-badge text-light rounded-pill px-3 py-2 shadow-sm">
+                        <i class="fas fa-calendar-alt me-1"></i> JAN-JUNE-2025
+                    </span>
+                </div>
+
+                <p class="lead mb-4 text-muted animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                    Master Word, Excel, PowerPoint, and more with cutting-edge training designed to enhance your productivity and unlock professional opportunities.
+                </p>
+
+                <div class="mt-4 d-grid gap-3 d-lg-flex animate__animated animate__fadeInUp" style="animation-delay: 0.7s;">
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 btn-cta bg-gradient-primary text-white">
+                        <i class="fas fa-rocket me-2"></i> Start Now - ৳6500
+                        <small class="opacity-75 fs-6 ms-2"><del>৳8500</del></small>
+                    </a>
+                    <a href="#details" class="btn btn-outline-dark btn-lg rounded-pill shadow-sm px-5 btn-cta">
+                        <i class="fas fa-info-circle me-2"></i> Explore Details
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Main Content -->
     <section class="py-4" id="details">

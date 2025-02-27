@@ -93,7 +93,7 @@
                             </ul>
                         </div>
                     <?php else: ?>
-                        <a href="login.php" class="btn btn-outline-primary rounded-pill px-4 btnl">
+                        <a href="login" class="btn btn-outline-primary rounded-pill px-4 btnl">
                             <i class="fas fa-sign-in-alt me-2"></i> Login
                         </a>
                         <a href="register" class="btn btn-primary rounded-pill px-4 btnr">
