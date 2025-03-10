@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-xl navbar-light bg-white nav-glass">
         <div class="container">
 
-            <a class="navbar-brand d-flex align-items-center" href="index.php">
+            <a class="navbar-brand d-flex align-items-center" href="<?php echo BASE_PATH; ?>/">
                 <img src="https://app.coredeft.com/img/favicon.ico" alt="CoreDeft Logo" width="50" class="me-2">
                 <span class="brand-name fw-bold color-primary">CoreDeft</span>
             </a>
@@ -18,7 +18,7 @@
                 <!-- Left Navigation -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="index.php">
+                        <a class="nav-link d-flex align-items-center" href="<?php echo BASE_PATH; ?>/">
                             <i class="fas fa-home me-2"></i> Home
                         </a>
                     </li>
@@ -71,14 +71,14 @@
                     </div>
                 </form>
                 <div class="d-flex align-items-center gap-3 cu">
-                    <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
+                    <?php if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']): ?>
                         <div class="dropdown">
                             <a href="#" class="d-flex align-items-center text-decoration-none" role="button" data-bs-toggle="dropdown">
-                                <img src="https://placehold.co/40" alt="User Avatar" class="rounded-circle me-2" width="40">
-                                <span class="color-primary fw-semibold"><?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
+                                <img src="<?php echo htmlspecialchars($_SESSION['photo']); ?>" alt="User Avatar" class="rounded-circle me-2" width="40" height="40">
+                                <span class="color-primary fw-semibold"><?php echo htmlspecialchars($_SESSION['first_name']); ?></span>
                             </a>
                             <ul class="dropdown-menu shadow">
-                                <li><a class="dropdown-item d-flex align-items-center" href="profile.php">
+                                <li><a class="dropdown-item d-flex align-items-center" href="<?php echo BASE_PATH; ?>/user/">
                                         <i class="fas fa-user me-2"></i> Profile
                                     </a></li>
                                 <li><a class="dropdown-item d-flex align-items-center" href="orders.php">
@@ -87,16 +87,16 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item d-flex align-items-center" href="logout.php">
+                                <li><a class="dropdown-item d-flex align-items-center" href="<?php echo BASE_PATH; ?>/user/logout">
                                         <i class="fas fa-sign-out-alt me-2"></i> Logout
                                     </a></li>
                             </ul>
                         </div>
                     <?php else: ?>
-                        <a href="login" class="btn btn-outline-primary rounded-pill px-4 btnl">
+                        <a href="<?php echo BASE_PATH; ?>/auth/login" class="btn btn-outline-primary rounded-pill px-4 btnl">
                             <i class="fas fa-sign-in-alt me-2"></i> Login
                         </a>
-                        <a href="register" class="btn btn-primary rounded-pill px-4 btnr">
+                        <a href="<?php echo BASE_PATH; ?>/auth/register" class="btn btn-primary rounded-pill px-4 btnr">
                             <i class="fas fa-user-plus me-2"></i> Register
                         </a>
                     <?php endif; ?>

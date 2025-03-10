@@ -1,0 +1,5 @@
+config.php
+.env
+# Allow sample files
+!config.sample.php
+!.env.sample

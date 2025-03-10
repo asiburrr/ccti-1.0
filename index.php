@@ -1,3 +1,7 @@
+<?php
+require 'common.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

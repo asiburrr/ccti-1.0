@@ -1,0 +1,420 @@
+[09-Mar-2025 22:10:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\ccti-1.0\auth\register\process.php:42
+Stack trace:
+#0 C:\xampp\htdocs\ccti-1.0\auth\register\process.php(171): validateForm(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\ccti-1.0\auth\register\process.php on line 42
+[09-Mar-2025 22:14:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #24 cannot be passed by reference in C:\xampp\htdocs\ccti-1.0\auth\register\process.php:225
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\ccti-1.0\auth\register\process.php on line 225
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:17:35 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:19:25 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:19:27 Europe/Berlin] Cookies not set: user_token or user_type missing
+[09-Mar-2025 22:19:29 Europe/Berlin] Cookies not set: user_token or user_type missing
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[09-Mar-2025 22:20:37 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:07:38 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:41 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:42 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:44 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:46 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:48 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:50 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:51 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:52 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:14:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:22 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:15:24 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:22:45 Europe/Berlin] Connection error: Access denied for user 'sksxffkl_demo'@'118.179.49.62' (using password: YES)
+[10-Mar-2025 09:25:23 Europe/Berlin] Connection error: Access denied for user 'sksxffkl_demo'@'118.179.49.62' (using password: YES)
+[10-Mar-2025 09:25:41 Europe/Berlin] Connection error: Access denied for user 'sksxffkl_demo'@'118.179.49.62' (using password: YES)
+[10-Mar-2025 09:31:01 Europe/Berlin] Connection error: No connection could be made because the target machine actively refused it
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:11 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:12 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:32:13 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:33:32 Europe/Berlin] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for deo.coredeft.com failed: No such host is known.  in C:\xampp\htdocs\ccti-1.0\connection.php on line 24
+[10-Mar-2025 09:33:32 Europe/Berlin] Connection error: php_network_getaddresses: getaddrinfo for deo.coredeft.com failed: No such host is known. 
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:33:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:34:17 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:34:21 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:34:22 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:34:22 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:34:22 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:34:23 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:34:28 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:35:36 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:35:40 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:35:41 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:35:58 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:36:00 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:36:01 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 09:36:47 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 09:37:12 Europe/Berlin] No user found for token: ab15788dc900320800b37b0441eeab359b2e0c8fcbb8b0de93d56f50f1a8d6937f99cb9b6457e8e5cbaafb5660c7c41b55a4e1f4f01e9d67c032dd9c6ed9e417
+[10-Mar-2025 09:37:12 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:39:27 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:40:15 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:40:15 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:40:15 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:42:06 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:43:20 Europe/Berlin] PHP Warning:  Undefined variable $loginPath in C:\xampp\htdocs\ccti-1.0\user\logout.php on line 7
+[10-Mar-2025 09:43:20 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:43:21 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:43:23 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:43:24 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:44:19 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:44:19 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:44:21 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:44:22 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 09:46:52 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 10:07:10 Europe/Berlin] No user found for token: 7f061b4d65f5db1a31523790606a18a24babbb7e55d4a93827f4f098e4aac685
+[10-Mar-2025 10:07:13 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 10:07:16 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 10:07:19 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 10:07:24 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:08:45 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:07 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:20 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:09:53 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:10:21 Europe/Berlin] Cookies not set: user_token or user_type missing
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:10:56 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:11:49 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:01 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 61
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 63
+[10-Mar-2025 10:14:02 Europe/Berlin] PHP Warning:  Undefined array key "toggle" in C:\xampp\htdocs\ccti-1.0\user\sidebar-nav.php on line 64

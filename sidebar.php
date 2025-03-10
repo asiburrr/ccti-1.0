@@ -338,7 +338,7 @@
                     <button class="btn btn-icon position-relative" aria-label="Notifications">
                         <i class="fas fa-bell animate__animated animate__pulse animate__infinite"></i>
                         <span
-                            class="position-absolute top-0 start-100 translate-middle badge bg-danger rounded-circle animate__animated animate__bounceIn">2</span>
+                            class="position-absolute top-0 start-100 translate-middle badge bg-danger rounded-circle animate__animated animate__bounceIn"></span>
                     </button>
                     <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
