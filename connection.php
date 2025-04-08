@@ -14,7 +14,7 @@ $username = $_ENV['DB_USER'] ?? 'root';
 $password = $_ENV['DB_PASS'] ?? '';
 $charset = $_ENV['DB_CHARSET'] ?? 'utf8mb4';
 
-ini_set('display_errors', 0); //1 for development, 0 for production
+ini_set('display_errors', 1); //1 for development, 0 for production
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/connerror.log');
 

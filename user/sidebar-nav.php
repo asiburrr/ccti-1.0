@@ -58,10 +58,12 @@ $currentPage = parse_url($currentPage, PHP_URL_PATH);
 
         foreach ($bottomNavItems as $nav) {
             $itemPath = parse_url($nav['href'], PHP_URL_PATH);
-            $isActive = !$nav['toggle'] && ($currentPage === $itemPath);
+            $hasToggle = isset($nav['toggle']) ? $nav['toggle'] : false;
+            $isActive = !$hasToggle && ($currentPage === $itemPath);
             $activeClass = $isActive ? 'active' : '';
-            $toggleClass = $nav['toggle'] ? 'profile-toggle' : '';
-            $toggleAttr = $nav['toggle'] ? 'onclick="toggleSidebar()"' : '';
+            $toggleClass = $hasToggle ? 'profile-toggle' : '';
+            $toggleAttr = $hasToggle ? 'onclick="toggleSidebar()"' : '';
+            
             echo "<a href='{$nav['href']}' class='nav-item $activeClass $toggleClass' $toggleAttr>";
             echo "<i class='fa-solid {$nav['icon']}'></i>";
             echo "<small>{$nav['label']}</small>";

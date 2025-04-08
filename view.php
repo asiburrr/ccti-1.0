@@ -334,63 +334,6 @@ require 'common.php';
                         <h5 class="text-uppercase color-primary fw-semibold mb-3 mb-2">Overview</h5>
                         Details
                     </div>
-                    <!-- Review Form -->
-                    <div class="glass-card shadow-sm">
-                        <form id="reviewForm" class="review-form">
-                            <h4 class="color-primary">Write a Review</h4>
-                            <div class="row g-3">
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="star-rating">
-                                        <fieldset class="d-flex gap-1 flex-row-reverse">
-                                            <input type="radio" id="star5" name="rating" value="5">
-                                            <label for="star5"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star4" name="rating" value="4">
-                                            <label for="star4"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star3" name="rating" value="3">
-                                            <label for="star3"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star2" name="rating" value="2">
-                                            <label for="star2"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star1" name="rating" value="1">
-                                            <label for="star1"><i class="fas fa-star"></i></label>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control" rows="3" name="comment" placeholder="Share your experience..." required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-cta w-100">Submit Review</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Reviews Section -->
-                    <h5 class="mt-4 text-uppercase color-primary fw-semibold">Reviews</h5>
-                    <div id="reviewsList" class="mt-4">
-                        <!-- Sample Reviews -->
-                        <div class="review-card p-3 shadow-sm">
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="avatar avatar-sm">
-                                    <img src="https://asiburrahman.com/img/aravi_3.jpg" width="40" height="40" style="object-fit: cover;" class="rounded-circle" alt="User">
-                                </div>
-                                <div>
-                                    <h5 class="mb-0">Asbur Rahman Aravi</h5>
-                                    <div class="text-accent mb-2">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <small class="text-muted">2 days ago</small>
-                                </div>
-                            </div>
-                            <p>Highly recommended!</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

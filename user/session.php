@@ -86,6 +86,4 @@ if (isset($_COOKIE['user_token']) && isset($_COOKIE['user_type'])) {
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = generateCsrfToken();
 }
-
-$conn->close();
 ?>
